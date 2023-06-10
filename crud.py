@@ -1,15 +1,12 @@
-import os
 import sqlite3
 from tkinter import messagebox
 
-db_path = os.path.abspath("registronotas.db")
-
 class AlunoGUI:
-    def __init__(self, root):
+    def _init_(self, root):
         # ...
         
         # Conexão com o banco de dados
-        self.conn = sqlite3.connect(db_path)
+        self.conn = sqlite3.connect("registronotas.db")
         self.cursor = self.conn.cursor()
         
         # Criação da tabela alunos
